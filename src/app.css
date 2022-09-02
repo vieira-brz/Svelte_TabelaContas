@@ -1,0 +1,109 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --bg: #242424;
+  --bg-solid: #111111;
+  --green: #5af05a;
+  --cinza: #979797;
+}
+
+a {
+  font-weight: 500;
+  color: var(--green);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--green);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 13px 10px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--bg);
+  cursor: pointer;
+  border: 1px solid var(--cinza); 
+  transition: 0.15s ease-in-out;
+}
+button:hover {
+  background: var(--bg-solid);
+  border: 1px solid var(--green); 
+}
+
+
+/* Input Field */
+.input-field {
+  position: relative;
+  display: inline-block;
+}
+.input-field > label {
+  top: 12px;
+  left: 6px;
+  padding: 0px 8px;
+  position: absolute;
+  color: var(--cinza);
+  background: var(--bg);
+  transition: 0.1s ease-in-out;
+}
+.input-field > input {
+  border: none;
+  background: none;
+  padding: 15px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--cinza); 
+  transition: 0.15s ease-in-out;
+}
+.input-field > input::placeholder {
+  color: transparent;
+}
+.input-field > input:focus {
+  border: 1px solid var(--green);
+}
+.input-field > input:focus + label,
+.input-field > input:not(:placeholder-shown) + label {
+  top: -12px;
+  color: var(--green);
+}
+.input-field > input:focus::placeholder {
+  color: lightgray;
+}
